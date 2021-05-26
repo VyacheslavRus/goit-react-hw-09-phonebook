@@ -1,7 +1,5 @@
 import React, { Suspense } from "react";
-import { connect, useSelector } from "react-redux";
 import { Switch } from "react-router";
-import { authSelector } from "../../redux/auth/authSelectors";
 import { mainRoutes } from "../../routes/mainRoutes";
 import PrivateRoute from "../../routes/PrivateRoute";
 import PublicRoate from "../../routes/PublicRoute";

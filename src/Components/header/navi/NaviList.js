@@ -1,7 +1,5 @@
 import React from "react";
-import { connect, useSelector } from "react-redux";
-import { NavLink, useLocation, withRouter } from "react-router-dom";
-import { authSelector } from "../../../redux/auth/authSelectors";
+import { NavLink } from "react-router-dom";
 import { mainRoutes } from "../../../routes/mainRoutes";
 import NavListItem from "./NaviListItem";
 import { NavListStyled } from "./NavListStyled";

@@ -21,7 +21,6 @@ const addALLClientsOperations = () => async (dispatch, getState) => {
 
       console.log(contactsObj);
       dispatch(addALLClients(contactsObj));
-      // this.setState({ contacts: contactsObj });
     } else return;
   } catch (error) {
     console.dir(error.response.data.error);
@@ -39,12 +38,6 @@ const addClientOperation = (client) => async (dispatch, getState) => {
       client
     );
     dispatch(addClient({ ...client, id: response.data.name }));
-    // this.setState((prevState) => ({
-    //   contacts: [
-    //     ...prevState.contacts,
-    //     { ...client, id: response.data.name },
-    //   ],
-    // }));
   } catch (error) {
     console.dir(error.response.data.error);
     dispatch(setError(error.response.data.error));
@@ -60,9 +53,6 @@ const deleteClientOperation = (id) => async (dispatch, getState) => {
       `https://shop-a2177-default-rtdb.firebaseio.com/clients/${id}.json`
     );
     dispatch(deleteClient(id));
-    // this.setState({
-    //   contacts: this.state.contacts.filter((el) => el.id !== id),
-    // });
   } catch (error) {
     console.dir(error.response.data.error);
     dispatch(setError(error.response.data.error));
